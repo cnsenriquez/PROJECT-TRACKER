@@ -808,8 +808,7 @@ window.exportPDF = function(){
     doc.text(`PO: ${proj.po}   Client: ${proj.client}   Date: ${proj.date}`,18,y+11);
 
     // Profit badge on right
-    doc.setFillColor(255,255,255);doc.setGlobalAlpha(0.15);
-    doc.roundedRect(PW-80,y+2,66,9,1.5,1.5,'F');doc.setGlobalAlpha(1);
+
     doc.setFont('helvetica','bold');doc.setFontSize(8);doc.setTextColor(255,255,255);
     doc.text(`${pIsProfit?'+':''} ${pesoP(profit)}  (${margin.toFixed(2)}%)`,PW-16,y+8,{align:'right'});
     y+=17;
